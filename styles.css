@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Libertinus+Sans:ital,wght@0,400;0,700;1,400&family=Oswald:wght@200..700&display=swap');
+
+*{
+    margin: 0;/* KUTU DIŞI BOŞLUK*/
+    padding: 0;/*KUTU İÇİ BOŞLUK*/
+    box-sizing: border-box;/*bir etikette, padding ve border genişlik ve yüksekliğe dahil edilir*/
+    font-family: "Oswald", sans-serif;
+}
+body{
+    height: 100vh;/*görüntü alanı yüksekliğin 100 de 100üne eşittir*/
+    display: flex;/*flex ile taşıyıcıya esneklik kazandırdık*/
+    align-items: center;/*ögelerin dikeyde ana ekrana ortalanması*/
+    justify-content: center;/*ögelerin yatayda ana ekrana ortalanması*/
+    background: #f5f5dc;
+}
+.container{
+    position: relative;/*konumlandırma türü*/
+    max-width: 300px;/*bir ögenin max genişliği*/
+    width: 100%;/*genişlik*/
+    border-radius: 15px;/*kenar yuvarlık*/
+    padding: 10px 20px 20px;/*kutu içi boşluk üst,sağ,alt*/
+    background: #556b2f;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);/*gölge verilen değer*/
+    border: 2px solid #556b2f;
+}
+.display{
+    height: 80px;/*yükseklik*/
+    width: 100%;
+    outline: none;/*öğenin sınırlarının dışında, etrafına çizilen bir çizgidir*/
+    /*border: none;*/
+    background: #f5f5dc;
+    border: 1px solid #FFFF9D;
+    border-radius: 10px;
+    text-align: right;/*yazının yazılacağı taraf*/
+    margin-bottom: 10px;/*alt kenar boşluğunu belirler*/
+    font-size: 25px;
+    color: #000000;
+    pointer-events: none;/*bir öğenin işaretçi olaylarına tepki verip vermeyeceğini tanımlar*/
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.8);/*gölge verilen değer*/
+}
+.buttons{
+    display: grid;/*bir öğenin görüntüleme davranışını (işleme kutusunun türünü) belirtir.*/
+    grid-gap: 10px;
+    grid-template-columns: repeat(4,1fr);/*bir ızgara düzenindeki sütunların sayısını (ve genişliklerini) belirtir.*/
+}
+.buttons button{
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;/*bir öğenin üzerine gelindiğinde görüntülenecek fare imlecini belirtir.*/
+    border: none;
+    background-color: #d6fa98;
+    font-size: 20px;
+    border: 1px solid #b7410e;
+}
+.buttons button:active{
+    transform: scale(0.99);/*bir öğeye 2B veya 3B dönüşüm uygular.*/
+}
+.operator{
+    color: #b7410e;
+}
